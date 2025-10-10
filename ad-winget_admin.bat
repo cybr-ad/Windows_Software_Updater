@@ -1,5 +1,6 @@
 @echo off
 
+color 4
 :: Forcing user to get administrator access
  
 :: Self-elevate: check for admin by testing net session
@@ -10,23 +11,7 @@ if %errorlevel% neq 0 (
     exit /b
 )
 
-
-
-
-
-
-
- 
-
-
-
-
 @echo off
-
-
-
-
-
 
 echo/
 chcp 65001 > nul
@@ -39,7 +24,6 @@ IF ERRORLEVEL 1 GOTO YES
 ECHO Executing Script ...
 
 echo/
-
 
 echo                                          --------------⏪ ALL INSTALLED SOFTWARE UPDATER ⏩--------------
 
@@ -70,11 +54,7 @@ cd %USERPROFILE%\AppData\Local\Microsoft\WindowsApps\Microsoft.DesktopAppInstall
 
 winget upgrade --all --silent --include-unknown --disable-interactivity --accept-source-agreements --accept-package-agreements
 
-
 echo/
-
-
-
 
 echo        ALL SOFTWARE HAS BEEN UPDATED SUCCESSFULLY.
 GOTO END
@@ -88,5 +68,5 @@ GOTO END
     
 :END
 
-
 pause
+
